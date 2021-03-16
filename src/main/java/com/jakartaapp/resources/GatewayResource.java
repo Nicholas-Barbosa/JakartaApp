@@ -1,9 +1,9 @@
-package com.jakartaapp.restcontroller;
+package com.jakartaapp.resources;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 @ApplicationPath("/api")
-public class Gateway extends Application {
+public class GatewayResource extends Application {
 
 }

@@ -26,8 +26,9 @@ public class HelloWorldServlet extends HttpServlet {
 	private final Logger log = LoggerFactory.getLogger(HelloWorldServlet.class);
 
 	@EJB
-	private HelloEjb helloEjb;
+	private  HelloEjb helloEjb;
 
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println(helloEjb.sayHello());
