@@ -29,7 +29,7 @@ public class LogginFilter implements ContainerRequestFilter, ContainerResponseFi
 	@Override
 	public void filter(ContainerRequestContext requestContext) throws IOException {
 		System.out.println("ContainerRequestFilter");
-		requestContext.setMethod("POST");
+		//requestContext.setMethod("POST");
 
 	}
 
