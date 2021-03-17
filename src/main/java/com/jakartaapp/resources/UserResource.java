@@ -1,8 +1,8 @@
 package com.jakartaapp.resources;
 
-import java.net.URI;
 import java.util.Set;
 
+import javax.annotation.security.DenyAll;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -27,12 +27,15 @@ public class UserResource {
 
 	@POST
 	public Response processUser(UserFormPost user) {
+		System.out.println("POST");
 		userCrudService.save(user.toModel());
 		return Response.status(Status.CREATED).build();
 	}
 
 	@GET
+	@DenyAll
 	public Set<User> showUsers() {
+
 		return userCrudService.findAll();
 	}
 }
